@@ -12,15 +12,6 @@
             <height>368</height>
         </rect>
     </property>
-    <property name="baseSize">
-        <size>
-            <width>640</width>
-            <height>480</height>
-        </size>
-    </property>
-    <property name="cursor">
-        <cursor>2</cursor>
-    </property>
     <property name="caption">
         <string>Access Control</string>
     </property>
@@ -48,6 +39,25 @@
                 <attribute name="title">
                     <string>Status</string>
                 </attribute>
+                <widget class="QFrame">
+                    <property name="name">
+                        <cstring>frame3</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>7</x>
+                            <y>4</y>
+                            <width>491</width>
+                            <height>271</height>
+                        </rect>
+                    </property>
+                    <property name="frameShape">
+                        <enum>StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Raised</enum>
+                    </property>
+                </widget>
             </widget>
             <widget class="QWidget">
                 <property name="name">
@@ -96,6 +106,20 @@
                 <property name="spacing">
                     <number>6</number>
                 </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonHelp</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Help</string>
+                    </property>
+                    <property name="accel">
+                        <string>F1</string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
                 <spacer>
                     <property name="name">
                         <cstring>Horizontal Spacing2</cstring>
@@ -136,13 +160,9 @@
         <sender>buttoneExit</sender>
         <signal>clicked()</signal>
         <receiver>MainWnd</receiver>
-        <slot>close()</slot>
+        <slot>reject()</slot>
     </connection>
 </connections>
-<includes>
-    <include location="local" impldecl="in declaration">data/common.h</include>
-    <include location="local" impldecl="in implementation">mainwnd.ui.h</include>
-</includes>
 <pixmapinproject/>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>
